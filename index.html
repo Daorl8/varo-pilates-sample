@@ -102,14 +102,25 @@ h2{ font-weight:400; font-size:clamp(1.65rem, 4.4vw, 2.4rem); line-height:1.4; l
 .hero .logo{ width:132px; }
 .hero h1{ font-weight:500; font-size:clamp(1.9rem, 6vw, 3.2rem); line-height:1.3; letter-spacing:-.03em; margin-top:26px; }
 .hero .sub{ color:var(--soft); font-size:clamp(1.02rem, 2.6vw, 1.2rem); margin-top:14px; }
-.hero .badge{ display:inline-flex; align-items:center; gap:10px; margin-top:22px; padding:8px 16px; border:1px solid var(--sand-l); border-radius:999px; font-size:.92rem; }
-.hero .badge i{ width:6px; height:6px; border-radius:50%; background:var(--sand); }
+.hero .cred{ margin-top:18px; font-size:.98rem; font-weight:500; color:var(--sand); letter-spacing:.01em; }
 .hero .arch{ aspect-ratio:4/5; max-width:520px; width:100%; justify-self:center; }
 .cta2{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; margin-top:30px; max-width:520px; }
 @media (max-width:439px){ .cta2{ grid-template-columns:minmax(0,1fr); } }
 @media (min-width:640px){ .cta2{ display:flex; flex-wrap:wrap; } }
 @media (min-width:900px){ .hero{ padding:72px 0 112px; } .hero .wrap{ grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr); gap:72px; } }
 
+/* 소개 · 지도 방식 */
+.team{ margin-top:22px; font-weight:500; font-size:1.05rem; }
+.checks{ list-style:none; margin-top:24px; border-top:1px solid var(--ink); }
+.checks li{ padding:14px 0 14px 28px; border-bottom:1px solid var(--line); position:relative; }
+.checks li::before{ content:""; position:absolute; left:2px; top:1.35em; width:12px; height:6px; border-left:1.5px solid var(--sand); border-bottom:1.5px solid var(--sand); transform:rotate(-45deg); }
+.quote{ margin-top:24px; color:var(--soft); }
+.teach{ display:grid; gap:40px; }
+.rec{ background:var(--bg2); border-radius:var(--arch); padding:56px 28px 32px; text-align:center; }
+.rec b{ font-weight:500; font-size:1.1rem; }
+.rec ul{ list-style:none; margin-top:16px; }
+.rec li{ padding:10px 0; border-top:1px solid var(--line); }
+@media (min-width:900px){ .teach{ grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr); gap:80px; align-items:center; } }
 /* 케어 시스템 */
 .care-grid{ display:grid; gap:48px; }
 .points{ list-style:none; margin-top:36px; border-top:1px solid var(--ink); }
@@ -123,14 +134,25 @@ h2{ font-weight:400; font-size:clamp(1.65rem, 4.4vw, 2.4rem); line-height:1.4; l
 .prog li{ background:var(--bg); border:1px solid var(--line); border-radius:var(--r); padding:22px 18px 24px; }
 .prog i{ display:block; font-style:normal; font-family:var(--display); font-size:1rem; color:var(--sand); }
 .prog b{ display:block; font-weight:500; font-size:clamp(1.05rem, 3vw, 1.25rem); margin-top:8px; }
+.prog p{ color:var(--soft); font-size:.92rem; line-height:1.7; margin-top:8px; }
 @media (min-width:768px){ .prog{ grid-template-columns:repeat(3, minmax(0,1fr)); gap:14px; } .prog li{ padding:28px 24px 30px; } }
 .lessons{ display:grid; gap:10px; margin-top:44px; }
 .lessons div{ display:flex; align-items:baseline; gap:16px; padding:18px 22px; border:1px solid var(--ink); border-radius:999px; }
 .lessons b{ font-family:var(--display); font-weight:400; font-size:1.35rem; min-width:2.6em; }
 .lessons span{ font-size:1.02rem; }
+.lessons small{ display:block; color:var(--soft); font-size:.85rem; line-height:1.5; }
+.lessons div{ align-items:center; }
 @media (min-width:768px){ .lessons{ grid-template-columns:repeat(3, minmax(0,1fr)); gap:14px; } }
 .price-note{ margin-top:22px; color:var(--soft); font-size:.95rem; }
 
+/* 체험 */
+.trial{ display:grid; gap:36px; }
+.for{ margin-top:16px; font-weight:500; color:var(--sand); }
+.trial-list{ list-style:none; display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:10px; }
+.trial-list li{ border:1px solid var(--line); border-radius:var(--arch); padding:40px 10px 26px; text-align:center; background:var(--bg); }
+.trial-list b{ display:block; font-family:var(--display); font-weight:400; font-size:1.8rem; }
+.trial-list span{ display:block; font-size:.92rem; margin-top:6px; }
+@media (min-width:900px){ .trial{ grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:72px; align-items:center; } }
 /* 스튜디오 */
 .studio{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; margin-top:44px; }
 .studio figure{ margin:0; overflow:hidden; border-radius:var(--r); aspect-ratio:3/4; background:var(--bg2); }
@@ -149,13 +171,14 @@ h2{ font-weight:400; font-size:clamp(1.65rem, 4.4vw, 2.4rem); line-height:1.4; l
 .info dt{ color:var(--mute); }
 .info a{ text-underline-offset:3px; }
 .info small{ display:block; color:var(--soft); font-size:.88rem; }
+.btn.sm{ min-height:44px; padding:0 18px; font-size:.88rem; margin-top:18px; }
 .map{ width:100%; height:240px; border:0; border-radius:var(--r); background:var(--bg2); display:block; margin-top:18px; filter:grayscale(.6); }
 @media (min-width:900px){ .branches{ grid-template-columns:repeat(2, minmax(0,1fr)); gap:24px; } .branch{ padding:34px 30px; } .map{ height:300px; } }
 
 /* 상담 */
 .ask{ text-align:center; }
 .ask .en{ margin-inline:auto; }
-.ask h2{ margin-inline:auto; max-width:20em; }
+.ask h2{ margin-inline:auto; max-width:22em; }
 .ask .cta2{ margin:30px auto 0; justify-content:center; }
 
 /* 푸터 */
@@ -184,16 +207,18 @@ h2{ font-weight:400; font-size:clamp(1.65rem, 4.4vw, 2.4rem); line-height:1.4; l
   <div class="wrap bar">
     <a class="brand" href="#top" aria-label="바로필라테스 처음으로"><img src="vp-mark.svg" alt="" width="191" height="212" /><span>VARO</span></a>
     <nav class="nav" aria-label="섹션">
-      <a href="#care">케어</a>
+      <a href="#about">소개</a>
       <a href="#program">프로그램</a>
+      <a href="#trial">체험</a>
       <a href="#studio">스튜디오</a>
       <a href="#branch">지점</a>
     </nav>
     <a class="btn fill" href="https://open.kakao.com/o/sKzPUZ2e" target="_blank" rel="noopener">카카오톡 상담</a>
   </div>
   <nav class="snav" aria-label="섹션 바로가기">
-    <a href="#care">케어</a>
+    <a href="#about">소개</a>
     <a href="#program">프로그램</a>
+    <a href="#trial">체험</a>
     <a href="#studio">스튜디오</a>
     <a href="#branch">지점</a>
   </nav>
@@ -204,51 +229,92 @@ h2{ font-weight:400; font-size:clamp(1.65rem, 4.4vw, 2.4rem); line-height:1.4; l
     <div class="wrap">
       <div>
         <img class="logo" src="vp-logo.svg" alt="VARO PILATES STUDIO" width="278" height="349" />
-        <h1>김포 장기동 <span class="nw">바로필라테스</span></h1>
+        <h1>바로 필라테스</h1>
         <p class="sub">물리치료사출신 원장.강사진이 지도하는센터</p>
-        <p class="badge"><i aria-hidden="true"></i>15년이상임상경험 물리치료사</p>
+        <p class="cred">15년이상임상경험 물리치료사</p>
         <div class="cta2">
           <a class="btn fill" href="https://open.kakao.com/o/sKzPUZ2e" target="_blank" rel="noopener">카카오톡 상담</a>
           <a class="btn" href="tel:01090239836">레슨문의 <span class="nw">010-9023-9836</span></a>
         </div>
       </div>
-      <figure class="arch"><img src="vp-hero.webp" alt="원형 거울에 비친 리포머와 캐딜락, 리넨 커튼 창" width="1040" height="1300" fetchpriority="high" /></figure>
+      <figure class="arch"><img src="vp-hero.webp" alt="리넨 커튼 창가 캐딜락 위에서 동작하는 모습의 실루엣" width="1040" height="1300" fetchpriority="high" /></figure>
     </div>
   </section>
 
-  <section class="sec alt" id="care" aria-labelledby="care-h">
+  <section class="sec alt" id="about" aria-labelledby="about-h">
     <div class="wrap care-grid">
       <figure class="arch reveal"><img src="vp-about.webp" alt="올리브 나무와 라탄 거울이 놓인 스튜디오 선반" width="800" height="1000" loading="lazy" /></figure>
       <div>
-        <span class="en reveal">Care System</span>
-        <h2 id="care-h" class="reveal">물리치료사 3인 전문 케어 시스템</h2>
-        <ol class="points">
-          <li class="reveal"><i>01</i><span>단순한 운동을 넘은 체형 교정 중심 필라테스</span></li>
-          <li class="reveal"><i>02</i><span>정확한 분석과 통증 케어에 강한 전문가 수업</span></li>
-          <li class="reveal"><i>03</i><span>안전하고 효과적인 <span class="nw">1:1 또는 2:1</span> 소수정예 지도</span></li>
-        </ol>
+        <span class="en reveal">About</span>
+        <h2 id="about-h" class="reveal">김포에서 체형을 제대로 바꾸고 싶은 분들을 위한 <span class="nw">프리미엄 필라테스</span> 스튜디오입니다.</h2>
+        <p class="team reveal">물리치료사 출신 원장 &amp; <span class="nw">경력 5~10년 이상</span> 강사진</p>
+        <ul class="checks">
+          <li class="reveal">개인레슨 / 2:1 / 4:1 소그룹 수업</li>
+          <li class="reveal">체형·통증·운동 목적에 맞춘 맞춤 진행</li>
+          <li class="reveal">소수정원으로 동작 하나하나 섬세하게 체크</li>
+          <li class="reveal">운동 초보자도 부담 없이 시작 가능</li>
+        </ul>
+        <p class="quote reveal">단순히 동작만 따라 하는 수업이 아닌, ‘왜 이 동작을 하는지’ 이해하며 내 몸의 변화를 느낄 수 있는 수업을 진행합니다.</p>
       </div>
     </div>
   </section>
 
-  <section class="sec" id="program" aria-labelledby="program-h">
+  <section class="sec" id="care" aria-labelledby="care-h">
+    <div class="wrap teach">
+      <div>
+        <span class="en reveal">Teaching</span>
+        <h2 id="care-h" class="reveal">한 동작, 한 호흡까지 섬세하게</h2>
+        <ol class="points">
+          <li class="reveal"><i>01</i><span>체형 분석 기반 맞춤 지도</span></li>
+          <li class="reveal"><i>02</i><span>통증 완화 &amp; 체형 교정 전문</span></li>
+          <li class="reveal"><i>03</i><span>초보자도 편안하게 시작 가능한 수업</span></li>
+        </ol>
+      </div>
+      <div class="rec reveal">
+        <b>이런 분들께 추천드려요</b>
+        <ul>
+          <li>자세 교정이 필요한 분</li>
+          <li>허리/목 통증이 있으신 분</li>
+          <li>운동 처음 시작하시는 분</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec alt" id="program" aria-labelledby="program-h">
     <div class="wrap">
       <span class="en reveal">Program</span>
-      <h2 id="program-h" class="reveal">재활교정/산전.산후/개인.듀엣/키즈</h2>
+      <h2 id="program-h" class="reveal"><span class="nw">재활교정/</span><wbr><span class="nw">산전.산후/</span><wbr><span class="nw">개인.듀엣/</span><wbr><span class="nw">키즈</span></h2>
       <ul class="prog">
-        <li class="reveal"><i>01</i><b>산전.산후</b></li>
-        <li class="reveal"><i>02</i><b>재활</b></li>
-        <li class="reveal"><i>03</i><b>다이어트</b></li>
-        <li class="reveal"><i>04</i><b>근력증진</b></li>
-        <li class="reveal"><i>05</i><b>키즈</b></li>
-        <li class="reveal"><i>06</i><b>자세교정</b></li>
+        <li class="reveal"><i>01</i><b>산전.산후</b><p>산모를 위한 임산부 필라테스로 몸의 변화에 맞춰 움직여요.</p></li>
+        <li class="reveal"><i>02</i><b>재활</b><p>통증 완화와 체형 교정에 맞춰 몸 상태를 살피며 진행해요.</p></li>
+        <li class="reveal"><i>03</i><b>다이어트</b><p>균형 잡힌 몸을 목표로 꾸준히 움직이는 습관을 만들어요.</p></li>
+        <li class="reveal"><i>04</i><b>근력증진</b><p>코어부터 근력과 체력을 차근차근 키워요.</p></li>
+        <li class="reveal"><i>05</i><b>키즈</b><p>놀면서 운동하며 집중력과 자세를 함께 길러요.</p></li>
+        <li class="reveal"><i>06</i><b>자세교정</b><p>체형 분석을 바탕으로 바른 자세를 만들어 가요.</p></li>
       </ul>
       <div class="lessons">
-        <div class="reveal"><b>1:1</b><span>개인레슨</span></div>
+        <div class="reveal"><b>1:1</b><span>개인레슨<small>수업 시간 40분</small></span></div>
         <div class="reveal"><b>2:1</b><span>듀엣레슨</span></div>
-        <div class="reveal"><b>4:1</b><span>그룹레슨</span></div>
+        <div class="reveal"><b>4:1</b><span>그룹 기구필라테스<small>평일 하루 1회 이용 가능한 그룹 무제한 프로그램</small></span></div>
       </div>
       <p class="price-note reveal">수업 가격은 상담 시 안내해 드려요.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="trial" aria-labelledby="trial-h">
+    <div class="wrap trial">
+      <div>
+        <span class="en reveal">First Visit</span>
+        <h2 id="trial-h" class="reveal">바로필라테스 4회 체험권</h2>
+        <p class="lead reveal">총 4회 수업을 통해 필라테스의 기본적인 움직임과 다양한 기구를 직접 경험해보실 수 있도록 구성했습니다.</p>
+        <p class="for reveal">필라테스를 처음 시작하시는 분</p>
+      </div>
+      <ul class="trial-list">
+        <li class="reveal"><b>2회</b><span>리포머 수업</span></li>
+        <li class="reveal"><b>1회</b><span>체어 수업</span></li>
+        <li class="reveal"><b>1회</b><span>바렐 수업</span></li>
+      </ul>
     </div>
   </section>
 
@@ -257,7 +323,7 @@ h2{ font-weight:400; font-size:clamp(1.65rem, 4.4vw, 2.4rem); line-height:1.4; l
       <span class="en reveal">Studio</span>
       <h2 id="studio-h" class="reveal">스튜디오</h2>
       <div class="studio">
-        <figure class="a reveal"><img src="vp-g1.webp" alt="창가 캐딜락에서 운동하는 모습의 실루엣" width="619" height="1100" loading="lazy" /></figure>
+        <figure class="a reveal"><img src="vp-g1.webp" alt="원형 거울 너머로 보이는 캐딜락과 리넨 커튼" width="760" height="950" loading="lazy" /></figure>
         <figure class="w reveal"><img src="vp-g2.webp" alt="리넨 커튼 앞 캐딜락에서 몸을 뻗는 동작" width="1100" height="770" loading="lazy" /></figure>
         <figure class="a reveal"><img src="vp-g3.webp" alt="원목 캐딜락과 스프링 기구" width="619" height="1100" loading="lazy" /></figure>
         <figure class="reveal"><img src="vp-g5.webp" alt="타원형 문과 둥근 테이블이 있는 라운지" width="1100" height="804" loading="lazy" /></figure>
@@ -272,27 +338,30 @@ h2{ font-weight:400; font-size:clamp(1.65rem, 4.4vw, 2.4rem); line-height:1.4; l
     <div class="wrap">
       <span class="en reveal">Location</span>
       <h2 id="branch-h" class="reveal">지점 안내</h2>
+      <p class="lead reveal">김포 장기동 위치 / 주차 가능</p>
       <div class="branches">
         <article class="branch reveal">
           <span class="en">Lavenice</span>
-          <h3>김포라베니체8차</h3>
+          <h3>라베니체점</h3>
           <dl class="info">
-            <div><dt>주소</dt><dd>경기 김포시 <span class="nw">태장로 820-26</span> 202호</dd></div>
+            <div><dt>주소</dt><dd>경기 김포시 <span class="nw">태장로 820-26</span> 202호<small>김포라베니체8차 202호</small></dd></div>
             <div><dt>찾아가는 길</dt><dd>라베니체 8차 프렌즈네일샵 옆. 래미안아파트 후문.</dd></div>
             <div><dt>운영</dt><dd>월 - 금 <span class="nw">09:00 - 22:00</span><small>토 <span class="nw">09:00 - 13:00</span> · <span class="nw">정기휴무 (매주 일요일)</span></small></dd></div>
             <div><dt>전화</dt><dd><a href="tel:050713249836" class="nw">0507-1324-9836</a></dd></div>
           </dl>
-          <iframe class="map" title="라베니체8차 지점 지도" src="https://maps.google.com/maps?q=%EA%B2%BD%EA%B8%B0%20%EA%B9%80%ED%8F%AC%EC%8B%9C%20%ED%83%9C%EC%9E%A5%EB%A1%9C%20820-26&amp;z=17&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <a class="btn sm" href="https://m.place.naver.com/place/1046946513/home" target="_blank" rel="noopener">네이버 예약 · 플레이스</a>
+          <iframe class="map" title="라베니체점 지도" src="https://maps.google.com/maps?q=%EA%B2%BD%EA%B8%B0%20%EA%B9%80%ED%8F%AC%EC%8B%9C%20%ED%83%9C%EC%9E%A5%EB%A1%9C%20820-26&amp;z=17&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </article>
         <article class="branch reveal">
           <span class="en">Hangang Central Xi</span>
-          <h3>김포한강센트럴자이1차</h3>
+          <h3>자이점</h3>
           <dl class="info">
             <div><dt>주소</dt><dd>김포한강센트럴자이1차 정문상가304호</dd></div>
-            <div><dt>찾아가는 길</dt><dd>자이1차 정문상가 GS더프레시 3층</dd></div>
-            <div><dt>전화</dt><dd><a href="tel:01033560405" class="nw">010-3356-0405</a></dd></div>
+            <div><dt>찾아가는 길</dt><dd>김포 장기동 한강센트럴자이 1차 정문상가 3층 <span class="nw">(GS더프레시 상가)</span></dd></div>
+            <div><dt>전화</dt><dd><a href="tel:01033560405" class="nw">010-3356-0405</a><small>상담 문의</small></dd></div>
           </dl>
-          <iframe class="map" title="한강센트럴자이1차 지점 지도" src="https://maps.google.com/maps?q=%EA%B9%80%ED%8F%AC%20%ED%95%9C%EA%B0%95%EC%84%BC%ED%8A%B8%EB%9F%B4%EC%9E%90%EC%9D%B41%EC%B0%A8&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <a class="btn sm" href="https://open.kakao.com/o/shMwDLvg" target="_blank" rel="noopener">자이점 카카오톡 오픈채팅</a>
+          <iframe class="map" title="자이점 지도" src="https://maps.google.com/maps?q=%EA%B9%80%ED%8F%AC%20%ED%95%9C%EA%B0%95%EC%84%BC%ED%8A%B8%EB%9F%B4%EC%9E%90%EC%9D%B41%EC%B0%A8&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </article>
       </div>
     </div>
@@ -301,10 +370,10 @@ h2{ font-weight:400; font-size:clamp(1.65rem, 4.4vw, 2.4rem); line-height:1.4; l
   <section class="sec alt ask" aria-labelledby="ask-h">
     <div class="wrap">
       <span class="en reveal">Contact</span>
-      <h2 id="ask-h" class="reveal">레슨문의</h2>
+      <h2 id="ask-h" class="reveal">바른 자세와 건강한 움직임을 위한 운동,<br>가까운 VARO PILATES에서 시작해 보세요!</h2>
       <div class="cta2 reveal">
         <a class="btn fill" href="https://open.kakao.com/o/sKzPUZ2e" target="_blank" rel="noopener">카카오톡 상담</a>
-        <a class="btn" href="tel:01090239836"><span class="nw">010-9023-9836</span></a>
+        <a class="btn" href="tel:01090239836">레슨문의 <span class="nw">010-9023-9836</span></a>
       </div>
     </div>
   </section>
@@ -313,7 +382,7 @@ h2{ font-weight:400; font-size:clamp(1.65rem, 4.4vw, 2.4rem); line-height:1.4; l
 <footer class="foot">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="바로필라테스 처음으로"><img src="vp-mark.svg" alt="" width="191" height="212" loading="lazy" /><span>VARO</span></a>
-    <p>바로필라테스 · 김포라베니체8차 202호 · 김포한강센트럴자이1차 정문상가304호</p>
+    <p>바로필라테스 · 라베니체점 <span class="nw">김포라베니체8차 202호</span> · 자이점 <span class="nw">김포한강센트럴자이1차</span> 정문상가304호</p>
     <p>레슨문의 <a href="tel:01090239836" class="nw">010-9023-9836</a> · <a href="https://www.instagram.com/varo_pilates/" target="_blank" rel="noopener">@varo_pilates</a> · <a href="https://m.place.naver.com/place/1046946513/home" target="_blank" rel="noopener">네이버 플레이스</a></p>
     <p>© VARO PILATES STUDIO</p>
   </div>
