@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>바로필라테스 VARO PILATES | 김포 장기동 필라테스 · 라베니체 · 한강센트럴자이</title>
+<meta name="description" content="김포 장기동 바로필라테스. 물리치료사출신 원장.강사진이 지도하는센터. 산전.산후/재활/다이어트/근력증진/키즈/자세교정. 김포라베니체8차 202호 · 김포한강센트럴자이1차 정문상가304호." />
+<link rel="canonical" href="https://varo-pilates-sample.lgt3232.workers.dev/" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:site_name" content="바로필라테스" />
+<meta property="og:title" content="바로필라테스 · 물리치료사출신 원장.강사진이 지도하는센터" />
+<meta property="og:description" content="재활교정/산전.산후/개인.듀엣/키즈 · 김포 장기동" />
+<meta property="og:url" content="https://varo-pilates-sample.lgt3232.workers.dev/" />
+<meta property="og:image" content="https://varo-pilates-sample.lgt3232.workers.dev/og-vp.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#FAFAFA" />
+<link rel="icon" href="favicon.png" type="image/png" />
+<!-- 시안 도메인 = varo-pilates-sample.lgt3232.workers.dev. 고객 인계 시 grep lgt3232 → canonical·og:url·og:image·JSON-LD url/image 치환 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ExerciseGym",
+  "name": "바로필라테스",
+  "url": "https://varo-pilates-sample.lgt3232.workers.dev/",
+  "image": "https://varo-pilates-sample.lgt3232.workers.dev/og-vp.jpg",
+  "telephone": "+82-507-1324-9836",
+  "address": { "@type": "PostalAddress", "streetAddress": "태장로 820-26 202호", "addressLocality": "김포시", "addressRegion": "경기도", "addressCountry": "KR" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "22:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "09:00", "closes": "13:00" }
+  ],
+  "sameAs": ["https://www.instagram.com/varo_pilates/", "https://m.place.naver.com/place/1046946513/home"]
+}
+</script>
+<style>
+@font-face{ font-family:"VP Display"; font-weight:400; font-display:swap; src:url("vp-marcellus.woff2") format("woff2"); }
+@font-face{ font-family:"VP Sans"; font-weight:300 600; font-display:swap; src:url("vp-pretendard.woff2") format("woff2"); }
+
+/* 스튜디오 사진 톤: 흰 벽 · 아치 거울 · 원목 리포머 · 리넨 커튼. 바탕 · 글자는 중성(R=G=B), 샌드는 번호 · 가는 선에만 */
+:root{
+  --bg:#FAFAFA;
+  --bg2:#F0F0F0;
+  --ink:#1A1A1A;
+  --soft:#555555;
+  --mute:#666666;
+  --line:#DDDDDD;
+  --sand:#7A6A50;
+  --sand-l:#CFC3AE;
+  --r:2px;
+  --arch:999px 999px var(--r) var(--r);
+  --display:"VP Display","VP Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --sans:"VP Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; scroll-padding-top:116px; -webkit-text-size-adjust:100%; }
+body{ font-family:var(--sans); color:var(--ink); background:var(--bg); line-height:1.8; font-size:16px; -webkit-font-smoothing:antialiased; word-break:keep-all; overflow-wrap:break-word; }
+img{ max-width:100%; height:auto; display:block; }
+a{ color:inherit; }
+:focus-visible{ outline:2px solid var(--ink); outline-offset:3px; }
+.wrap{ width:min(100% - 40px, 1140px); margin-inline:auto; }
+.nw{ white-space:nowrap; }
+
+/* 헤더 */
+.top{ position:sticky; top:0; z-index:50; background:var(--bg); border-bottom:1px solid var(--line); }
+.top .bar{ display:flex; align-items:center; justify-content:space-between; gap:16px; height:66px; }
+.brand{ display:flex; align-items:center; gap:10px; text-decoration:none; }
+.brand img{ height:36px; width:auto; }
+.brand span{ font-family:var(--display); font-size:1.05rem; letter-spacing:.28em; }
+.nav{ display:none; gap:30px; font-size:.92rem; }
+.nav a{ text-decoration:none; color:var(--soft); }
+.top .btn{ min-height:40px; padding:0 18px; font-size:.86rem; }
+.snav{ display:flex; gap:2px; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none; border-top:1px solid var(--line); padding:0 12px; }
+.snav::-webkit-scrollbar{ display:none; }
+.snav a{ flex:0 0 auto; display:flex; align-items:center; min-height:44px; padding:0 12px; font-size:.9rem; text-decoration:none; color:var(--soft); white-space:nowrap; }
+.snav a:first-child{ margin-left:auto; } .snav a:last-child{ margin-right:auto; }
+@media (min-width:900px){ .nav{ display:flex; } .snav{ display:none; } html{ scroll-padding-top:74px; } .top .bar{ display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr); } .top .bar .btn{ justify-self:end; } }
+@media (max-width:899px){ .top .btn{ display:none; } }
+@media (hover:hover){ .nav a:hover, .snav a:hover{ color:var(--ink); } }
+
+/* 버튼 */
+.btn{ display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:50px; padding:0 24px; border:1px solid var(--ink); border-radius:999px; text-decoration:none; font-weight:500; font-size:.95rem; color:var(--ink); background:transparent; transition:background-color .25s, color .25s, transform .1s; }
+.btn.fill{ background:var(--ink); color:var(--bg); }
+.btn:active{ transform:scale(.98); }
+@media (hover:hover){ .btn:hover{ background:var(--ink); color:var(--bg); } .btn.fill:hover{ background:#000000; } }
+
+/* 공통 */
+.sec{ padding:112px 0; }
+.sec.alt{ background:var(--bg2); }
+.en{ display:block; font-family:var(--display); font-size:.9rem; letter-spacing:.26em; text-transform:uppercase; color:var(--sand); }
+h2{ font-weight:400; font-size:clamp(1.65rem, 4.4vw, 2.4rem); line-height:1.4; letter-spacing:-.02em; margin-top:14px; }
+.lead{ color:var(--soft); margin-top:16px; max-width:36em; }
+.arch{ overflow:hidden; border-radius:var(--arch); background:var(--bg2); }
+.arch img{ width:100%; height:100%; object-fit:cover; }
+
+/* 히어로: 글자 + 아치 사진 (사진 위 글자 없음) */
+.hero{ padding:56px 0 88px; }
+.hero .wrap{ display:grid; gap:40px; align-items:center; }
+.hero .logo{ width:132px; }
+.hero h1{ font-weight:500; font-size:clamp(1.9rem, 6vw, 3.2rem); line-height:1.3; letter-spacing:-.03em; margin-top:26px; }
+.hero .sub{ color:var(--soft); font-size:clamp(1.02rem, 2.6vw, 1.2rem); margin-top:14px; }
+.hero .badge{ display:inline-flex; align-items:center; gap:10px; margin-top:22px; padding:8px 16px; border:1px solid var(--sand-l); border-radius:999px; font-size:.92rem; }
+.hero .badge i{ width:6px; height:6px; border-radius:50%; background:var(--sand); }
+.hero .arch{ aspect-ratio:4/5; max-width:520px; width:100%; justify-self:center; }
+.cta2{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; margin-top:30px; max-width:520px; }
+@media (max-width:439px){ .cta2{ grid-template-columns:minmax(0,1fr); } }
+@media (min-width:640px){ .cta2{ display:flex; flex-wrap:wrap; } }
+@media (min-width:900px){ .hero{ padding:72px 0 112px; } .hero .wrap{ grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr); gap:72px; } }
+
+/* 케어 시스템 */
+.care-grid{ display:grid; gap:48px; }
+.points{ list-style:none; margin-top:36px; border-top:1px solid var(--ink); }
+.points li{ display:grid; grid-template-columns:56px minmax(0,1fr); gap:14px; padding:22px 0; border-bottom:1px solid var(--line); font-size:clamp(1.02rem, 2.4vw, 1.15rem); }
+.points i{ font-style:normal; font-family:var(--display); font-size:1.3rem; color:var(--sand); line-height:1.5; }
+.care-grid .arch{ aspect-ratio:3/4; max-width:420px; width:100%; justify-self:center; }
+@media (min-width:900px){ .care-grid{ grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); gap:80px; align-items:center; } .care-grid .arch{ order:-1; } }
+
+/* 프로그램 */
+.prog{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; margin-top:40px; list-style:none; }
+.prog li{ background:var(--bg); border:1px solid var(--line); border-radius:var(--r); padding:22px 18px 24px; }
+.prog i{ display:block; font-style:normal; font-family:var(--display); font-size:1rem; color:var(--sand); }
+.prog b{ display:block; font-weight:500; font-size:clamp(1.05rem, 3vw, 1.25rem); margin-top:8px; }
+@media (min-width:768px){ .prog{ grid-template-columns:repeat(3, minmax(0,1fr)); gap:14px; } .prog li{ padding:28px 24px 30px; } }
+.lessons{ display:grid; gap:10px; margin-top:44px; }
+.lessons div{ display:flex; align-items:baseline; gap:16px; padding:18px 22px; border:1px solid var(--ink); border-radius:999px; }
+.lessons b{ font-family:var(--display); font-weight:400; font-size:1.35rem; min-width:2.6em; }
+.lessons span{ font-size:1.02rem; }
+@media (min-width:768px){ .lessons{ grid-template-columns:repeat(3, minmax(0,1fr)); gap:14px; } }
+.price-note{ margin-top:22px; color:var(--soft); font-size:.95rem; }
+
+/* 스튜디오 */
+.studio{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; margin-top:44px; }
+.studio figure{ margin:0; overflow:hidden; border-radius:var(--r); aspect-ratio:3/4; background:var(--bg2); }
+.studio figure.a{ border-radius:var(--arch); }
+.studio figure.w, .studio figure.mw{ grid-column:1 / -1; aspect-ratio:16/10; }
+.studio img{ width:100%; height:100%; object-fit:cover; }
+@media (min-width:900px){ .studio{ grid-template-columns:repeat(4, minmax(0,1fr)); gap:16px; } .studio figure.w{ grid-column:span 2; aspect-ratio:auto; } .studio figure.mw{ grid-column:auto; aspect-ratio:3/4; } }
+
+/* 지점 */
+.branches{ display:grid; gap:20px; margin-top:44px; }
+.branch{ background:var(--bg); border:1px solid var(--line); border-radius:var(--r); padding:28px 22px; }
+.branch h3{ font-weight:500; font-size:1.3rem; letter-spacing:-.01em; }
+.branch .en{ font-size:.8rem; }
+.info{ margin-top:18px; border-top:1px solid var(--ink); }
+.info > div{ display:grid; grid-template-columns:76px minmax(0,1fr); gap:12px; padding:13px 0; border-bottom:1px solid var(--line); font-size:.95rem; }
+.info dt{ color:var(--mute); }
+.info a{ text-underline-offset:3px; }
+.info small{ display:block; color:var(--soft); font-size:.88rem; }
+.map{ width:100%; height:240px; border:0; border-radius:var(--r); background:var(--bg2); display:block; margin-top:18px; filter:grayscale(.6); }
+@media (min-width:900px){ .branches{ grid-template-columns:repeat(2, minmax(0,1fr)); gap:24px; } .branch{ padding:34px 30px; } .map{ height:300px; } }
+
+/* 상담 */
+.ask{ text-align:center; }
+.ask .en{ margin-inline:auto; }
+.ask h2{ margin-inline:auto; max-width:20em; }
+.ask .cta2{ margin:30px auto 0; justify-content:center; }
+
+/* 푸터 */
+.foot{ border-top:1px solid var(--line); padding:52px 0 124px; font-size:.9rem; color:var(--soft); }
+.foot .brand img{ height:44px; }
+.foot p{ margin-top:14px; }
+.foot p + p{ margin-top:6px; }
+.foot a{ color:var(--ink); text-underline-offset:3px; }
+.foot .brand{ text-decoration:none; color:var(--ink); }
+@media (min-width:900px){ .foot{ padding-bottom:52px; } }
+
+/* 모바일 하단 바: 카카오톡 상담 · 전화 · 지점 */
+.quick{ position:fixed; left:0; right:0; bottom:0; z-index:60; display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:6px; padding:8px 10px calc(8px + env(safe-area-inset-bottom)); background:var(--bg); border-top:1px solid var(--line); }
+.quick a{ display:flex; align-items:center; justify-content:center; min-height:48px; border:1px solid var(--ink); border-radius:999px; font-size:.86rem; font-weight:500; text-decoration:none; text-align:center; }
+.quick a.fill{ background:var(--ink); color:var(--bg); }
+@media (min-width:900px){ .quick{ display:none; } }
+
+/* 나타나기 (모션 강제 재생 · 다올 방침) */
+.js .reveal{ opacity:0; transform:translateY(18px); transition:opacity .9s ease var(--d,0s), transform .9s ease var(--d,0s); }
+.js .reveal.in{ opacity:1; transform:none; }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="바로필라테스 처음으로"><img src="vp-mark.svg" alt="" width="191" height="212" /><span>VARO</span></a>
+    <nav class="nav" aria-label="섹션">
+      <a href="#care">케어</a>
+      <a href="#program">프로그램</a>
+      <a href="#studio">스튜디오</a>
+      <a href="#branch">지점</a>
+    </nav>
+    <a class="btn fill" href="https://open.kakao.com/o/sKzPUZ2e" target="_blank" rel="noopener">카카오톡 상담</a>
+  </div>
+  <nav class="snav" aria-label="섹션 바로가기">
+    <a href="#care">케어</a>
+    <a href="#program">프로그램</a>
+    <a href="#studio">스튜디오</a>
+    <a href="#branch">지점</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <img class="logo" src="vp-logo.svg" alt="VARO PILATES STUDIO" width="278" height="349" />
+        <h1>김포 장기동 <span class="nw">바로필라테스</span></h1>
+        <p class="sub">물리치료사출신 원장.강사진이 지도하는센터</p>
+        <p class="badge"><i aria-hidden="true"></i>15년이상임상경험 물리치료사</p>
+        <div class="cta2">
+          <a class="btn fill" href="https://open.kakao.com/o/sKzPUZ2e" target="_blank" rel="noopener">카카오톡 상담</a>
+          <a class="btn" href="tel:01090239836">레슨문의 <span class="nw">010-9023-9836</span></a>
+        </div>
+      </div>
+      <figure class="arch"><img src="vp-hero.webp" alt="원형 거울에 비친 리포머와 캐딜락, 리넨 커튼 창" width="1040" height="1300" fetchpriority="high" /></figure>
+    </div>
+  </section>
+
+  <section class="sec alt" id="care" aria-labelledby="care-h">
+    <div class="wrap care-grid">
+      <figure class="arch reveal"><img src="vp-about.webp" alt="올리브 나무와 라탄 거울이 놓인 스튜디오 선반" width="800" height="1000" loading="lazy" /></figure>
+      <div>
+        <span class="en reveal">Care System</span>
+        <h2 id="care-h" class="reveal">물리치료사 3인 전문 케어 시스템</h2>
+        <ol class="points">
+          <li class="reveal"><i>01</i><span>단순한 운동을 넘은 체형 교정 중심 필라테스</span></li>
+          <li class="reveal"><i>02</i><span>정확한 분석과 통증 케어에 강한 전문가 수업</span></li>
+          <li class="reveal"><i>03</i><span>안전하고 효과적인 <span class="nw">1:1 또는 2:1</span> 소수정예 지도</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="program" aria-labelledby="program-h">
+    <div class="wrap">
+      <span class="en reveal">Program</span>
+      <h2 id="program-h" class="reveal">재활교정/산전.산후/개인.듀엣/키즈</h2>
+      <ul class="prog">
+        <li class="reveal"><i>01</i><b>산전.산후</b></li>
+        <li class="reveal"><i>02</i><b>재활</b></li>
+        <li class="reveal"><i>03</i><b>다이어트</b></li>
+        <li class="reveal"><i>04</i><b>근력증진</b></li>
+        <li class="reveal"><i>05</i><b>키즈</b></li>
+        <li class="reveal"><i>06</i><b>자세교정</b></li>
+      </ul>
+      <div class="lessons">
+        <div class="reveal"><b>1:1</b><span>개인레슨</span></div>
+        <div class="reveal"><b>2:1</b><span>듀엣레슨</span></div>
+        <div class="reveal"><b>4:1</b><span>그룹레슨</span></div>
+      </div>
+      <p class="price-note reveal">수업 가격은 상담 시 안내해 드려요.</p>
+    </div>
+  </section>
+
+  <section class="sec alt" id="studio" aria-labelledby="studio-h">
+    <div class="wrap">
+      <span class="en reveal">Studio</span>
+      <h2 id="studio-h" class="reveal">스튜디오</h2>
+      <div class="studio">
+        <figure class="a reveal"><img src="vp-g1.webp" alt="창가 캐딜락에서 운동하는 모습의 실루엣" width="619" height="1100" loading="lazy" /></figure>
+        <figure class="w reveal"><img src="vp-g2.webp" alt="리넨 커튼 앞 캐딜락에서 몸을 뻗는 동작" width="1100" height="770" loading="lazy" /></figure>
+        <figure class="a reveal"><img src="vp-g3.webp" alt="원목 캐딜락과 스프링 기구" width="619" height="1100" loading="lazy" /></figure>
+        <figure class="reveal"><img src="vp-g5.webp" alt="타원형 문과 둥근 테이블이 있는 라운지" width="1100" height="804" loading="lazy" /></figure>
+        <figure class="reveal"><img src="vp-g4.webp" alt="캐딜락 옆 벽에 걸린 필라테스 기구 그림 액자" width="1100" height="825" loading="lazy" /></figure>
+        <figure class="a reveal"><img src="vp-g7.webp" alt="리넨 커튼과 원목 문" width="605" height="1100" loading="lazy" /></figure>
+        <figure class="mw reveal"><img src="vp-g6.webp" alt="원목 문과 배너가 있는 스튜디오 입구" width="1100" height="1073" loading="lazy" /></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="branch" aria-labelledby="branch-h">
+    <div class="wrap">
+      <span class="en reveal">Location</span>
+      <h2 id="branch-h" class="reveal">지점 안내</h2>
+      <div class="branches">
+        <article class="branch reveal">
+          <span class="en">Lavenice</span>
+          <h3>김포라베니체8차</h3>
+          <dl class="info">
+            <div><dt>주소</dt><dd>경기 김포시 <span class="nw">태장로 820-26</span> 202호</dd></div>
+            <div><dt>찾아가는 길</dt><dd>라베니체 8차 프렌즈네일샵 옆. 래미안아파트 후문.</dd></div>
+            <div><dt>운영</dt><dd>월 - 금 <span class="nw">09:00 - 22:00</span><small>토 <span class="nw">09:00 - 13:00</span> · <span class="nw">정기휴무 (매주 일요일)</span></small></dd></div>
+            <div><dt>전화</dt><dd><a href="tel:050713249836" class="nw">0507-1324-9836</a></dd></div>
+          </dl>
+          <iframe class="map" title="라베니체8차 지점 지도" src="https://maps.google.com/maps?q=%EA%B2%BD%EA%B8%B0%20%EA%B9%80%ED%8F%AC%EC%8B%9C%20%ED%83%9C%EC%9E%A5%EB%A1%9C%20820-26&amp;z=17&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </article>
+        <article class="branch reveal">
+          <span class="en">Hangang Central Xi</span>
+          <h3>김포한강센트럴자이1차</h3>
+          <dl class="info">
+            <div><dt>주소</dt><dd>김포한강센트럴자이1차 정문상가304호</dd></div>
+            <div><dt>찾아가는 길</dt><dd>자이1차 정문상가 GS더프레시 3층</dd></div>
+            <div><dt>전화</dt><dd><a href="tel:01033560405" class="nw">010-3356-0405</a></dd></div>
+          </dl>
+          <iframe class="map" title="한강센트럴자이1차 지점 지도" src="https://maps.google.com/maps?q=%EA%B9%80%ED%8F%AC%20%ED%95%9C%EA%B0%95%EC%84%BC%ED%8A%B8%EB%9F%B4%EC%9E%90%EC%9D%B41%EC%B0%A8&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec alt ask" aria-labelledby="ask-h">
+    <div class="wrap">
+      <span class="en reveal">Contact</span>
+      <h2 id="ask-h" class="reveal">레슨문의</h2>
+      <div class="cta2 reveal">
+        <a class="btn fill" href="https://open.kakao.com/o/sKzPUZ2e" target="_blank" rel="noopener">카카오톡 상담</a>
+        <a class="btn" href="tel:01090239836"><span class="nw">010-9023-9836</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="바로필라테스 처음으로"><img src="vp-mark.svg" alt="" width="191" height="212" loading="lazy" /><span>VARO</span></a>
+    <p>바로필라테스 · 김포라베니체8차 202호 · 김포한강센트럴자이1차 정문상가304호</p>
+    <p>레슨문의 <a href="tel:01090239836" class="nw">010-9023-9836</a> · <a href="https://www.instagram.com/varo_pilates/" target="_blank" rel="noopener">@varo_pilates</a> · <a href="https://m.place.naver.com/place/1046946513/home" target="_blank" rel="noopener">네이버 플레이스</a></p>
+    <p>© VARO PILATES STUDIO</p>
+  </div>
+</footer>
+
+<nav class="quick" aria-label="빠른 연결">
+  <a class="fill" href="https://open.kakao.com/o/sKzPUZ2e" target="_blank" rel="noopener">카카오톡 상담</a>
+  <a href="tel:01090239836">전화</a>
+  <a href="#branch">지점</a>
+</nav>
+
+<script>
+(function(){
+  var pending=[].slice.call(document.querySelectorAll('.reveal'));
+  pending.forEach(function(el){
+    var sib=[].slice.call(el.parentNode.children).filter(function(c){ return c.classList.contains('reveal'); });
+    if(sib.length>1){ el.style.setProperty('--d',(Math.min(sib.indexOf(el),5)*0.07)+'s'); }
+  });
+  function showAll(){ pending.forEach(function(el){ el.classList.add('in'); }); pending=[]; }
+  function start(){
+    var t=setInterval(function(){
+      if(!pending.length){ clearInterval(t); return; }
+      if(window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 4){ showAll(); return; }
+      var line=window.innerHeight*0.92;
+      pending=pending.filter(function(el){
+        if(el.getBoundingClientRect().top < line){ el.classList.add('in'); return false; }
+        return true;
+      });
+    },120);
+  }
+  var started=false; function go(){ if(started) return; started=true; start(); }
+  if(document.fonts && document.fonts.ready){ document.fonts.ready.then(go); }
+  setTimeout(go,1200);
+})();
+</script>
+</body>
+</html>
